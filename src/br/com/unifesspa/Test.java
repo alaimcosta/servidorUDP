@@ -9,7 +9,9 @@ package br.com.unifesspa;
 
 public class Test {
 	public static void main(String[] args) throws Exception {
-		new Thread(new ClienteUdp(7777)).start();
-		new Thread(new ServidorUdp(9999)).start();
+		int portServidor = 9999;
+		
+		new Thread(new ClienteUdp(portServidor)).start();
+		new Thread(new ServidorUdp(portServidor)).start();
 	}
 }

@@ -23,7 +23,7 @@ public class ServidorUdp implements Runnable{
 	
     public ServidorUdp(int formPort) throws Exception {
         this.user = "localhost";
-        this.formPort = 8888;
+        this.formPort = formPort;
         datagramSocket = new DatagramSocket(formPort);
     }
     

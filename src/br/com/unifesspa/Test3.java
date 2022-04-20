@@ -2,7 +2,9 @@ package br.com.unifesspa;
 
 public class Test3 {
 	public static void main(String[] args) throws Exception{
-		new Thread(new ClienteUdp(7770)).start();
-		new Thread(new ServidorUdp(9992)).start();
+		int portServidor = 9992;
+
+		new Thread(new ClienteUdp(portServidor)).start();
+		new Thread(new ServidorUdp(portServidor)).start();
 		}
 }

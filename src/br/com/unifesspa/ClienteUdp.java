@@ -18,16 +18,16 @@ import java.net.SocketException;
 public class ClienteUdp implements Runnable {
 
     private String toIP;
-    private int fromPort;
+    //private int fromPort;
     private int toPort;
     BufferedReader bufferedReader=null;
     DatagramSocket datagramSocket=null;
 	
     
-    public ClienteUdp(int fromPort) {
+    public ClienteUdp(int toPort) {
         this.toIP = "localhost";
-        this.toPort = 8888;
-        this.fromPort = fromPort;
+        this.toPort = toPort;
+        //this.fromPort = fromPort;
         try {
             datagramSocket = new DatagramSocket();
             bufferedReader = new BufferedReader(new InputStreamReader(System.in));
